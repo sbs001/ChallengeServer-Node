@@ -9,8 +9,8 @@ const { urlencoded } = require('body-parser');
 const server = express();
 server.name = 'SERVER';
 
-server.listen(3001, () => console.log('%s listening at 3001'))
-
+// server.listen(3001, () => console.log('%s listening at 3001'))
+server.listen(process.env.PORT || 5000)
 
 
 server.use(bodyParser.urlencoded({ extended: true, limit: '50mb' }));
