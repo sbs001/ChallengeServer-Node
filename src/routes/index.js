@@ -1,9 +1,6 @@
 const { default: axios } = require('axios');
 const { Router } = require('express');
 
-require('dotenv').config();
-const { API_KEY } = process.env;
-
 
 const router = Router();
 
@@ -19,7 +16,7 @@ router.get('/:key/:param', async(req, res) => {
         return res.send(a.data)
 
     } catch (error) {
-        return res.stattus(400).send(error)
+        return res.status(400).send(error)
     }
 
 
